@@ -4,154 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        #dark-page {
-            background-color: black;
-            color: white;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            position: relative;
-            transition: opacity 1s ease-out;
-        }
-
-        #light-button {
-            background-color: #008ded;
-            color: black;
-            padding: 20px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.6em;
-            cursor: pointer;
-        }
-
-        #blur-background {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background-image: url('https://i.giphy.com/3o85xzkvl1siB2rHSo.webp');
-            background-position: center center;
-            background-size: cover;
-            background-repeat: no-repeat;  
-            filter: blur(10px);
-            z-index: -1;
-        }
-
-        #birthday-scene {
-            text-align: center;
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            overflow: hidden;
-            color: #fff;
-        }
-
-        #lights {
-            animation: fade-in 2s;
-            font-size: 2em;
-            color: gold;
-        }
-
-        @keyframes fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        #balloons {
-            position: absolute;
-            bottom: -100px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: float 5s infinite ease-in-out;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-200px); }
-            100% { transform: translateY(0); }
-        }
-
-        #cake {
-            margin-top: 50px;
-        }
-
-        #facts {
-            margin: 10px 0;
-            font-size: 1em;
-            color: #cfcfcf;
-        }
-
-        .balloon {
-            width: 108px;
-            height: 160px;
-            background-image: url('https://clipart-library.com/images/8c65En7Ei.png');
-            background-position: center center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            position: absolute;
-            animation: float-balloon 6s infinite ease-in-out;
-        }
-
-        @keyframes float-balloon {
-            0% { transform: translateY(100vh); }
-            100% { transform: translateY(-100vh); }
-        }
-
-        .balloon:hover {
-            animation: pop 0.5s forwards;
-        }
-
-        @keyframes pop {
-            to { transform: scale(0); opacity: 0; }
-        }
-
-        #typing-effect {
-            font-size: 1.5em;
-            font-weight: bold;
-            white-space: nowrap;
-            overflow: hidden;
-            display: inline-block;
-        }
-
-        .letter {
-            display: inline-block;
-            opacity: 0;
-        }
-
-        .sparks {
-            position: relative;
-        }
-
-        #spark-1 {
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        #spark-2 {
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-  
 </head>
 <body>
     <div id="dark-page">
-        <h1>Dobrodosao!</h1>
-        <button id="light-button">💡</button>
+        <h1>Dobrodošao!</h1>
+        <button id="light-button"><img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaW9zNm9vYzUybGFocHd3cGJwMHN3M3JnZjB1c3gwcDdkMWNyNjNkeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qTL6FKFRFs9rvNq7qn/giphy.gif" width="80"> </button>
     </div>
 
     <div id="blur-background"></div>
 
     <div id="birthday-scene">
+
         <div id="sparks">
             <div id="spark-1">
                 <img src="https://i.gifer.com/YKmD.gif" width="200px">
@@ -160,26 +25,40 @@
                 <img src="https://i.gifer.com/YKmD.gif" width="200px">
             </div>
         </div>
-        <div id="lights">🎉🎉🎉</div>
-        <!-- <div id="balloons">
-            <div class="balloon" style="left: 20%;"></div>
-            <div class="balloon" style="left: 40%;"></div>
-            <div class="balloon" style="left: 60%;"></div>
-        </div> -->
-        <div id="typing-effect"></div>
+
+        <!-- <div id="lights">🎉🎉🎉</div> -->
+
         <div id="cake">
             <img src="images/cake.png" alt="Birthday Cake" width="200px">
         </div>
 
-        <div id="date"></div>
-
-        <div id="facts">Danasnji datum kroz historiju
-            <p id="fact-1" class="facts"></p>
-            <p id="fact-2" class="facts"></p>
-            <p id="fact-3" class="facts"></p>
-            <p id="fact-4" class="facts"></p>
-            <p id="fact-5" class="facts"></p>
+        <div class="typed-container">
+            <div id="typed-strings">
+                <p>Sretan Rođendan,<br>Irvaaa!</p>
+                <p>Želimo ti sve najbolje<br>za tvoj 23. rođendan.</p>
+                <p>Nadam se da trenutno uživaš<br>sa prijateljima?</p>
+                <p>Posebno ti želimo da uživaš<br>u specijalnom poklonu 😉</p>
+            </div>
+            <span id="typed"></span>
         </div>
+
+        <div class="button-container">
+            <p style="margin: 0; font-size: 14px; text-shadow: 0px 0px 7px rgba(0,0,0,0.6);">Klikni i Pogledaj Šta se Krije Iza Svakog Dugmeta Ispod</p>
+            <button class="fun-button button-1" onclick="document.location.href = '/facts/index.html'">
+                <span>Historija 📚</span>
+            </button>
+            <button class="fun-button button-2 gif-background" onclick="document.location.href = '/gift/index.html'">
+                <span>Poklon 🎁</span>
+            </button>
+            <button class="button-3" role="button" onclick="document.location.href = '/plane/index.html'">
+                <span>Putovanje 📦</span>
+            </button>
+            <button class="fun-button button-4 video-background" onclick="document.location.href = '/spotify/index.html'">
+                <span>Muzika 🎶</span>
+            </button>
+        </div>
+
+        <div id="date" style="margin: 0; font-size: 14px; text-shadow: 0px 0px 7px rgba(0,0,0,0.6);"></div>
     
     </div>
 
@@ -192,9 +71,12 @@
             darkPage.style.opacity = '0';
             setTimeout(() => {
                 darkPage.style.display = 'none';
-                const typed = new Typed('#typing-effect', {
-                    strings: ['Sretan Rodendan,<br>Irvine!', "Zelimo ti sve najbolje<br>za tvoj 23. rodjendan", 'Nadam se da trenutno uzivas<br>u zabavi?', 'Posebno ti zelimo da uzivas<br>u specijalnom poklonu (wink)'],
-                    typeSpeed: 100
+                const typed = new Typed('#typed', {
+                    stringsElement: '#typed-strings',
+                    typeSpeed: 100,
+                    backDelay: 1000,
+                    loop: false,
+                    loopCount: Infinity,
                 });
             }, 2000); // Matches the transition duration
         });
@@ -202,25 +84,21 @@
         // Timer and Date
         const dateElement = document.getElementById('date');
 
-        dateElement.textContent = `Danas je ${new Date().toDateString()}`;
+        console.log(new Date().toDateString());
 
-        document.querySelectorAll(".facts").forEach(fact => {
-            fetch('https://birthdaydate.udruzenjetoprak.workers.dev/2/1')
-            .then(response => response.text())
-            .then(data => {
-
-            fact.textContent = `${data}`;
-
-        });
-        })
+        if(new Date().toDateString() == "Sat Feb 01 2025"){
+            dateElement.textContent = `Danas je ${new Date().toDateString()} (Irvin's Brithday)`;
+        } else {
+            dateElement.textContent = `Danas je ${new Date().toDateString()}`;
+        }
 
         const style = document.createElement('style');
         style.innerHTML = `
-        @keyframes fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        `;
+            @keyframes fade-in {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            `;
         document.head.appendChild(style);
     </script>
 </body>

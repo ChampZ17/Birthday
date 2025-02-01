@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f4f1e8;
+    color: #3e3e3e;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #8b7355;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 5px solid #6b5a4a;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem; /* Smaller font for mobile */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1rem; /* Smaller font for mobile */
+    font-style: italic;
+}
+
+/* Container */
+.container {
+    width: 90%; /* Full width on mobile */
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Facts List */
+.facts-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.facts-list li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #8b7355;
+    -webkit-transition: background-color 0.3s ease; /* Safari transition support */
+    transition: background-color 0.3s ease;
+}
+
+.facts-list li:hover {
+    background-color: #e8e1d5;
+}
+
+.facts-list li h3 {
+    margin: 0 0 5px;
+    font-size: 1.2rem; /* Smaller font for mobile */
+    color: #8b7355;
+}
+
+.facts-list li p {
+    margin: 0;
+    font-size: 1rem; /* Smaller font for mobile */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #8b7355;
+    color: #fff;
+    border-top: 5px solid #6b5a4a;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 600px) {
+    header h1 {
+        font-size: 2.5rem; /* Larger font for tablets and desktops */
+        letter-spacing: 2px;
+    }
+
+    header p {
+        font-size: 1.2rem; /* Larger font for tablets and desktops */
+    }
+
+    .container {
+        width: 80%; /* Slightly narrower container for larger screens */
+        padding: 20px;
+    }
+
+    .facts-list li {
+        padding: 15px;
+    }
+
+    .facts-list li h3 {
+        font-size: 1.4rem; /* Larger font for tablets and desktops */
+    }
+
+    .facts-list li p {
+        font-size: 1.1rem; /* Larger font for tablets and desktops */
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        max-width: 800px; /* Fixed max width for large desktops */
+    }
+}

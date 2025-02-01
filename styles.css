@@ -1,0 +1,372 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#dark-page {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    display: -webkit-box; /* Safari/iOS support for flexbox */
+    display: -ms-flexbox; /* IE 10 support for flexbox */
+    display: flex; /* Standard flexbox */
+    -webkit-box-pack: center; /* Safari/iOS support for justify-content */
+    -ms-flex-pack: center; /* IE 10 support for justify-content */
+    justify-content: center; /* Standard justify-content */
+    -webkit-box-align: center; /* Safari/iOS support for align-items */
+    -ms-flex-align: center; /* IE 10 support for align-items */
+    align-items: center; /* Standard align-items */
+    -webkit-box-orient: vertical; /* Safari/iOS support for flex-direction */
+    -ms-flex-direction: column; /* IE 10 support for flex-direction */
+    flex-direction: column; /* Standard flex-direction */
+    position: relative;
+    -webkit-transition: opacity 1s ease-out; /* Safari/iOS support for transition */
+    transition: opacity 1s ease-out; /* Standard transition */
+}
+
+#light-button {
+    background-color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+#light-button img {
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+#blur-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://i.giphy.com/3o85xzkvl1siB2rHSo.webp');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-filter: blur(15px); /* Safari/iOS support for filter */
+    filter: blur(15px); /* Standard filter */
+    z-index: -1;
+}
+
+#birthday-scene {
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    color: #fff;
+}
+
+#lights {
+    -webkit-animation: fade-in 2s; /* Safari/iOS support for animation */
+    animation: fade-in 2s; /* Standard animation */
+    font-size: 2em;
+    color: gold;
+}
+
+@-webkit-keyframes fade-in { /* Safari/iOS support for keyframes */
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#balloons {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    -webkit-transform: translateX(-50%); /* Safari/iOS support for transform */
+    transform: translateX(-50%); /* Standard transform */
+    -webkit-animation: float 5s infinite ease-in-out; /* Safari/iOS support for animation */
+    animation: float 5s infinite ease-in-out; /* Standard animation */
+}
+
+@-webkit-keyframes float { /* Safari/iOS support for keyframes */
+    0% { -webkit-transform: translateY(0); }
+    50% { -webkit-transform: translateY(-200px); }
+    100% { -webkit-transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-200px); }
+    100% { transform: translateY(0); }
+}
+
+#cake {
+    margin-top: 50px;
+}
+
+#facts {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #cfcfcf;
+}
+
+.balloon {
+    width: 108px;
+    height: 160px;
+    background-image: url('https://clipart-library.com/images/8c65En7Ei.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    -webkit-animation: float-balloon 6s infinite ease-in-out; /* Safari/iOS support for animation */
+    animation: float-balloon 6s infinite ease-in-out; /* Standard animation */
+}
+
+@-webkit-keyframes float-balloon { /* Safari/iOS support for keyframes */
+    0% { -webkit-transform: translateY(100vh); }
+    100% { -webkit-transform: translateY(-100vh); }
+}
+
+@keyframes float-balloon {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}
+
+.balloon:hover {
+    -webkit-animation: pop 0.5s forwards; /* Safari/iOS support for animation */
+    animation: pop 0.5s forwards; /* Standard animation */
+}
+
+@-webkit-keyframes pop { /* Safari/iOS support for keyframes */
+    to { -webkit-transform: scale(0); opacity: 0; }
+}
+
+@keyframes pop {
+    to { transform: scale(0); opacity: 0; }
+}
+
+.typed-container {
+    min-height: 80px;
+}
+
+#typed {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+}
+
+.sparks {
+    position: relative;
+}
+
+#spark-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#spark-2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* BUTTONS */
+
+/* Button Container */
+.button-container {
+    display: -webkit-box; /* Safari/iOS support for flexbox */
+    display: -ms-flexbox; /* IE 10 support for flexbox */
+    display: flex; /* Standard flexbox */
+    padding: 20px 40px;
+    -webkit-box-orient: vertical; /* Safari/iOS support for flex-direction */
+    -ms-flex-direction: column; /* IE 10 support for flex-direction */
+    flex-direction: column; /* Standard flex-direction */
+    gap: 30px;
+}
+
+/* Base Button Styles */
+.fun-button {
+    padding: 15px 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    background: -webkit-linear-gradient(45deg, #F60000, #FF8C00, #FFEE00, #4DE94C, #3783FF, #4815AA); /* Safari/iOS support for gradient */
+    background: linear-gradient(45deg, #F60000, #FF8C00, #FFEE00, #4DE94C, #3783FF, #4815AA); /* Standard gradient */
+    background-size: 300% 300%;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.4s ease; /* Safari/iOS support for transition */
+    transition: all 0.4s ease; /* Standard transition */
+    position: relative;
+    overflow: hidden;
+    -webkit-animation: moveGradient 2s ease infinite; /* Safari/iOS support for animation */
+    animation: moveGradient 2s ease infinite; /* Standard animation */
+}
+
+/* Moving Gradient Animation */
+@-webkit-keyframes moveGradient { /* Safari/iOS support for keyframes */
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Hover Effect */
+.fun-button:hover {
+    -webkit-transform: scale(1.05); /* Safari/iOS support for transform */
+    transform: scale(1.05); /* Standard transform */
+}
+
+/* Optional GIF/Video Background */
+.fun-button.gif-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTVta2ZsNm5zZTF3N2xiYnZyYmppNHFncHlpb3g5cXFuNzNyeG42YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DNdXvxRRm73V0QCFJb/giphy.gif') center/cover;
+    opacity: 0.8;
+    z-index: 1;
+    border-radius: 50px;
+}
+
+.fun-button.video-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3hqbHI1Yjdneng2dGtjYXRiM2V4d3JsMDA5Z2Q3Y2FqNzFnODVpMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/voOtfoeGsAPqudwT9S/giphy.gif') 0 180px/cover;
+    opacity: 0.8;
+    z-index: 1;
+    border-radius: 50px;
+}
+
+/* Button Text */
+.fun-button span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Specific Button Styles */
+.button-1 {
+    /* box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px; */
+}
+
+.button-2 {
+    background: transparent;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.button-4 {
+    background: transparent;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/* CSS */
+.button-3 {
+    padding: 15px 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+    background: #111;
+    position: relative;
+    z-index: 0;
+    user-select: none;
+    -webkit-user-select: none; /* Safari/iOS support for user-select */
+    touch-action: manipulation;
+}
+
+.button-3:before {
+    content: "";
+    background: -webkit-linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000); /* Safari/iOS support for gradient */
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000); /* Standard gradient */
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    background-size: 400%;
+    z-index: -1;
+    -webkit-filter: blur(5px); /* Safari/iOS support for filter */
+    filter: blur(5px); /* Standard filter */
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    -webkit-animation: glowing-button-3 20s linear infinite; /* Safari/iOS support for animation */
+    animation: glowing-button-3 20s linear infinite; /* Standard animation */
+    -webkit-transition: opacity 0.3s ease-in-out; /* Safari/iOS support for transition */
+    transition: opacity 0.3s ease-in-out; /* Standard transition */
+    border-radius: 50px;
+}
+
+@-webkit-keyframes glowing-button-3 { /* Safari/iOS support for keyframes */
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes glowing-button-3 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.button-3:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+}
+
+#date {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0); /* Safari/iOS support for transform */
+    transform: translate(-50%, 0); /* Standard transform */
+    width: 100%;
+}

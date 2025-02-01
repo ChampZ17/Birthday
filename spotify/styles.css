@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+}
+
+#blur-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://i.gifer.com/fxac.gif');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-filter: blur(8px); /* Safari/iOS support for filter */
+    filter: blur(8px); /* Standard filter */
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.sparks {
+    position: relative;
+}
+
+#spark-1 {
+    position: absolute;
+    left: -30px;
+    bottom: -30px;
+    -webkit-transform: rotateZ(45deg); /* Safari/iOS support for transform */
+    transform: rotateZ(45deg); /* Standard transform */
+}
+
+#spark-2 {
+    position: absolute;
+    right: -30px;
+    bottom: -30px;
+    -webkit-transform: rotateZ(-45deg); /* Safari/iOS support for transform */
+    transform: rotateZ(-45deg); /* Standard transform */
+}

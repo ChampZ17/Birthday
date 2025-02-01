@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box; /* Safari/iOS support for flexbox */
+    display: -ms-flexbox; /* IE 10 support for flexbox */
+    display: flex; /* Standard flexbox */
+    -webkit-box-pack: center; /* Safari/iOS support for justify-content */
+    -ms-flex-pack: center; /* IE 10 support for justify-content */
+    justify-content: center; /* Standard justify-content */
+    -webkit-box-align: center; /* Safari/iOS support for align-items */
+    -ms-flex-align: center; /* IE 10 support for align-items */
+    align-items: center; /* Standard align-items */
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    /* background-color: #f0f0f0; */
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+    /* border: 2px solid #ccc;
+    border-radius: 10px; */
+}
