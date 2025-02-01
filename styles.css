@@ -57,6 +57,14 @@ body {
     color: #fff;
 }
 
+#birthday-scene {
+    display: none; /* Hide the content initially */
+}
+
+#blur-background {
+    display: none; /* Hide the content initially */
+}
+
 #lights {
     -webkit-animation: fade-in 2s; /* Safari/iOS support for animation */
     animation: fade-in 2s; /* Standard animation */

@@ -43,7 +43,6 @@
         </div>
 
         <div class="button-container">
-            <p style="margin: 0; font-size: 14px; text-shadow: 0px 0px 7px rgba(0,0,0,0.6);">Klikni i Pogledaj Šta se Krije Iza Svakog Dugmeta Ispod</p>
             <button class="fun-button button-1" onclick="document.location.href = '/Birthday/facts/index.html'">
                 <span>Historija 📚</span>
             </button>
@@ -66,11 +65,14 @@
         const lightButton = document.getElementById('light-button');
         const darkPage = document.getElementById('dark-page');
         const birthdayScene = document.getElementById('birthday-scene');
+        const blurBackground = document.getElementById('blur-background');
 
         lightButton.addEventListener('click', () => {
             darkPage.style.opacity = '0';
             setTimeout(() => {
                 darkPage.style.display = 'none';
+                birthdayScene.style.display = 'block';
+                blurBackground.style.display = 'block';
                 const typed = new Typed('#typed', {
                     stringsElement: '#typed-strings',
                     typeSpeed: 100,
