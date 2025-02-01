@@ -267,7 +267,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3hqbHI1Yjdneng2dGtjYXRiM2V4d3JsMDA5Z2Q3Y2FqNzFnODVpMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/voOtfoeGsAPqudwT9S/giphy.gif') 0 180px/cover;
+    background: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3hqbHI1Yjdneng2dGtjYXRiM2V4d3JsMDA5Z2Q3Y2FqNzFnODVpMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/voOtfoeGsAPqudwT9S/giphy.gif') 0 0/cover;
     opacity: 0.8;
     z-index: 1;
     border-radius: 50px;
